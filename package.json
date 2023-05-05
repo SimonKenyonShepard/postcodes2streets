@@ -1,0 +1,27 @@
+{
+  "name": "osm-postcode2addresses-api",
+  "version": "0.0.1",
+  "description": "A project to provide a free lookup service for postcodes to addresses",
+  "main": "index.js",
+  "scripts": {
+    "refreshData": "node src/refreshOSMData.js && node src/refreshHMLRMData.js",
+    "extractStreets": "node src/extractOSMStreetData.js && node src/extractHMLRStreetData.js",
+    "mergeFinalStreetData" : "node src/mergeExtractedStreetData.js",
+    "build" : "npm run extractStreets && mergeFinalStreetData",
+    "fullBuild" : "npm run refreshData && npm run extractStreets && mergeFinalStreetData",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "OSM",
+    "Data",
+    "Postcode",
+    "Streets",
+    "addresses",
+    "lookup"
+  ],
+  "author": "Simon Kenyon Shepard",
+  "license": "ISC",
+  "dependencies": {
+    "sax": "^1.2.4"
+  }
+}
