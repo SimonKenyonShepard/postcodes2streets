@@ -3,7 +3,7 @@ name: Publish Postcodes to GitHub Pages
 on:
   push:
     branches:
-      - master # Update this to the name of your default branch if it's different
+      - main # Update this to the name of your default branch if it's different
 
 jobs:
   deploy:
