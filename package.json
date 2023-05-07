@@ -6,9 +6,9 @@
   "scripts": {
     "refreshData": "node src/refreshOSMData.js && node src/refreshHMLRMData.js",
     "extractStreets": "node src/extractOSMStreetData.js && node src/extractHMLRStreetData.js",
-    "mergeFinalStreetData" : "node src/mergeExtractedStreetData.js",
-    "build" : "npm run extractStreets && mergeFinalStreetData",
-    "fullBuild" : "npm run refreshData && npm run extractStreets && mergeFinalStreetData",
+    "mergeFinalStreetData": "node src/mergeExtractedStreetData.js",
+    "build": "npm run extractStreets && mergeFinalStreetData",
+    "fullBuild": "npm run refreshData && npm run extractStreets && mergeFinalStreetData",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
