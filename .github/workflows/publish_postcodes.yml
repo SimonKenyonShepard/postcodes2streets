@@ -21,7 +21,7 @@ jobs:
       run: cp -R html/* temp_deploy/
 
     - name: Copy postcode files to deploy folder
-      run: cp -R finalOutput/* temp_deploy/postcodes/
+      run: find finalOutput/ -name '*' -print0 | xargs -0 cp -uf -t temp_deploy/postcodes/
 
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@4.1.6
