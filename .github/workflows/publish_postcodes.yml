@@ -14,9 +14,14 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
+    - name: Combine folders to deploy
+      run: |
+        mkdir -p temp_deploy/postcodes
+        cp -R html/* temp_deploy/
+        cp -R finalOutput/* temp_deploy/postcodes
+
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@4.1.6
       with:
         branch: gh-pages
-        folder: finalOutput
-        target-folder: postcodes
+        folder: temp_deploy
