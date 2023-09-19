@@ -3,4 +3,4 @@ A repo that contains the data to convert UK postcodes to street names and deploy
 
 > To see a demo : https://postcodes2streets.ownedcollectively.com/
 
-> Or to use as an API : https://postcodes2streets.ownedcollectively.com/postcodes/BN23QD
+> Or to use as a JSON (array) API : https://postcodes2streets.ownedcollectively.com/postcodes/BN23QD
